@@ -51,7 +51,7 @@ public class Test_ch10_lotto당첨처리 {
 
 	public static void lotto_generator(int n) {
 		Random number = new Random();
-		List<HashSet<Integer>> lotSet = new ArrayList<>();
+		List<HashSet<Integer>> lottoSet = new ArrayList<>();
 		HashSet<Integer> lotto = null;// 복권1장
 //		List<List<Integer>> al = new ArrayList<>();
 		/*
@@ -67,11 +67,11 @@ public class Test_ch10_lotto당첨처리 {
 			for (int j = 0; lotto.size() < 6; j++) {
 				lotto.add(1 + number.nextInt(45));
 			}
-			lotSet.add(lotto); // 복권 명부에 발행 복권을 추가
+			lottoSet.add(lotto); // 복권 명부에 발행 복권을 추가
 
 		}
 		System.out.println("\nlot hashset을 출력\n");
-		for (HashSet<Integer> eachLotto : lot) {
+		for (HashSet<Integer> eachLotto : lotto) {
 			/*
 			 * [33 1 17 22 6 8] + 보너스번호: 12 [ 0 1 18 38 6 24] + 보너스번호: 29
 			 */
@@ -92,7 +92,7 @@ public class Test_ch10_lotto당첨처리 {
 		System.out.print("당첨번호: " + win + "보너스번호= " + bonus);// 6개의 당첨번호와 보너스번호
 		// 6개를 맞힌 복권을 찾는다
 		System.out.println();
-		winnerLotto(win, bonus, lotSet);// 1등을 찾는다
+		winnerLotto(win, bonus, lottoSet);// 1등을 찾는다
 
 	}
 
@@ -128,7 +128,7 @@ public class Test_ch10_lotto당첨처리 {
 			System.out.println("4등 복권 " + elem + " 당첨번호:" + w);
 			break;
 		case 5:
-//			if (L.get(6).equals(elem.get(6))) { //보너스 번호가 일치하는 지를 조사 
+			if (L.get(6).equals(elem.get(6))) { //보너스 번호가 일치하는 지를 조사 
 				System.out.println("2등 복권 " + elem + " 당첨번호:" + w);
 				break;
 			}

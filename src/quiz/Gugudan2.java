@@ -42,19 +42,36 @@ public class Gugudan2 {
 			
 			}System.out.println(("-").repeat(70));
 		}
+	
+//	public void printColumn(int col) {
+//		for (int j = 1 ; j < 9 ; j++) {
+//		for (int i = 1 ; i < 9 ; i++) {
+//			
+//				int b = i * j;
+//				if ( i%col == 0) {
+//					System.out.println((i+1) + "*" + j + "=" + b);
+//				} else {
+//					System.out.print((i+1) + "*" + j + "=" + b + "\t");
+//				}
+//				
+//			}
+//			
+//			
+//		}System.out.println();
+//	}
 
 	public static void main(String[] args) {
 
 		Gugudan2 ggd = new Gugudan2();
 		ggd.printHorizontal();
 		System.out.println();
-//		ggd.printColumn(2);
-//		ggd.printColumn(3);
-//		ggd.printColumn(4);
+		ggd.printColumn(2);
+		ggd.printColumn(3);
+		ggd.printColumn(4);
 		ggd.printColumn(5);
 		ggd.printColumn(6);
 		ggd.printColumn(7);
-		
+		ggd.printColumn(8);
 		
 	}
 }
