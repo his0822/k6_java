@@ -14,7 +14,7 @@ public static void main(String[] args) {
 			System.out.println("ASKII:"+c);
 		}		
 	} catch(IOException e) {
-		e.printStackTrace();
+		
 	}
 	}
 }

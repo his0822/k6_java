@@ -14,51 +14,48 @@ public class Gugudan2 {
 				}
 			}
 			System.out.println();
-		}System.out.println(("-").repeat(70));
+		}
+		System.out.println(("-").repeat(70));
 	}
 
-	public void printColumn(int col) {
-	
-
-		for (int n = 0 ; n < 9/col+1 ; n++) {
-			int i = 1;
-			for (int j = 1 ; j < 10 ; j++) {
-				for ( i = n*col + 1 ; i < (n+1)*col + 1 ; i++) {
-					int b = (i+1) * j;
-					if ( i < 9 ) {
-						if (b < 10) {
-							System.out.print((i+1) + "*" + j + "=" + " " + b + "\t");
-						} else {
-							System.out.print((i+1) + "*" + j + "=" + b + "\t");
-						}
-					}else {
-						continue;
-					}
-						
-				}
-				System.out.println();
-				}
-			System.out.println();
-			
-			}System.out.println(("-").repeat(70));
-		}
-	
-//	public void printColumn(int col) {
-//		for (int j = 1 ; j < 9 ; j++) {
-//		for (int i = 1 ; i < 9 ; i++) {
-//			
-//				int b = i * j;
-//				if ( i%col == 0) {
-//					System.out.println((i+1) + "*" + j + "=" + b);
-//				} else {
-//					System.out.print((i+1) + "*" + j + "=" + b + "\t");
+//	public void printColumn(int col) 
+//		for (int n = 0 ; n < 7/col+1 ; n++) {
+//			int i = 1;
+//			for (int j = 1 ; j < 10 ; j++) {
+//				for ( i = n*col + 1 ; i < (n+1)*col + 1 ; i++) {
+//					int b = (i+1) * j;
+//					if ( i < 9 ) {
+//						if (b < 10) {
+//							System.out.print((i+1) + "*" + j + "=" + " " + b + "\t");
+//						} else {
+//							System.out.print((i+1) + "*" + j + "=" + b + "\t");
+//						}
+//					}else {
+//						continue;
+//					}
+//						
 //				}
-//				
-//			}
+//				System.out.println();
+//				}
+//			System.out.println();
 //			
-//			
-//		}System.out.println();
-//	}
+//			}System.out.println(("-").repeat(70));
+//		}
+
+	public void printColumn(int col) {
+
+		for (int i = 1; i < 9; i++) {
+			int j = 0;
+			int b = (i + 1) * (j + 1);
+			if (i % col != 0) {
+				System.out.print((i+1) + "*" + (j+1) + "=" + b + "\t");
+			} else {
+				System.out.println((i+1) + "*" + (j+1) + "=" + b);
+			}
+		}System.out.println();
+}
+		
+	
 
 	public static void main(String[] args) {
 
@@ -72,6 +69,6 @@ public class Gugudan2 {
 		ggd.printColumn(6);
 		ggd.printColumn(7);
 		ggd.printColumn(8);
-		
+
 	}
 }
