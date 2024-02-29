@@ -22,21 +22,19 @@ public class PrimeNumber2 {
 			list1.add(i);
 		}
 		
-		int j = 0 ;
-		while( j == list1.size()/2) {
-			for (  ; j <= list1.size()/2 ; j++) {
-				for (int x : list1) {
-					if ( j == 0) {
-						continue;
-					} else if ( x%j == 0 ) {
-						continue;
-					} else {
-						list2.add(x);
-					}
-			    }	
+		for (int x : list1) {
+			boolean ox = true;
+
+			for (int j = 2; j < x; j++) {
+				if (x % j == 0) {
+					ox = false;
+					break;
+				}
 			}
+			if (ox) {
+                list2.add(x);
+            }	
 		}
 		System.out.println(list2);
 	}
 }
-
