@@ -9,14 +9,19 @@ public class PrimeNumber1 {
 		System.out.print("입력값:");
 		Scanner sc = new Scanner(System.in);
 		int a = sc.nextInt();
+				
+		boolean ox = true;
+		
 		for (int i = 2; i <= a / 2; i++) {
 			if (a % i == 0) {
-				System.out.println("소수임");
-				break;
-			} else {
-				System.out.println("소수아님");
+				ox = false;
 				break;
 			}
+		}
+		if(ox) {
+			System.out.println("소수임");
+		}else {
+			System.out.println("소수아님");
 		}
 	}
 }

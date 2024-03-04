@@ -17,6 +17,7 @@ public class PrimeNumber2 {
 
 		List<Integer> list1 = new ArrayList<>();
 		List<Integer> list2 = new ArrayList<>();
+		
 		int i;
 		for (i = s; i <= e; i++) {
 			list1.add(i);
